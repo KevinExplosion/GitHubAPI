@@ -16,7 +16,7 @@ exports.displayRepos = function(gitName){
     console.log(response);
 
     for (i=0; i<response.length; i++) {
-      $('.showGitRepo').html("<li>Repository: "+response[i].name+ "</li> <li>Description: "+response[i].description+ "</li>");
+      $('.showGitRepo').append("<li>Repository: <a href='https://github.com/'"+gitName+"'/'"+response[i].name+ "'>"+response[i].name+"</a></li> <li>Description: "+response[i].description+ "</li>");
     }
   }).fail(function(error){
       $('.showGitName').html(error.message);
