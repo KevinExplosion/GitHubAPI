@@ -1,5 +1,5 @@
 var displayGit = require('./../js/gitHub.js').displayGit;
-//var displayRepos = require('./../js/gitHub.js').displayRepos;
+var displayRepos = require('./../js/gitHub.js').displayRepos;
 
 
 $(document).ready(function() {
@@ -8,6 +8,6 @@ $(document).ready(function() {
 
     var gitName = $('#searchGit').val();
     displayGit(gitName);
-    //displayRepos(gitName);
+    displayRepos(gitName);
   });
 });
